@@ -30,3 +30,9 @@ platform=riot url=<url> user=<user> token=<token>
 ```
 platform=rocketchat url=<url> email=<email> password=<password>
 ```
+
+### Slack
+
+```
+platform=slack token=<token>
+```
