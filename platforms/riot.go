@@ -1,13 +1,10 @@
 package platforms
 
 import (
-	"log"
-
 	"github.com/matrix-org/gomatrix"
 )
 
 type Riot struct {
-	logger *log.Logger
 	client *gomatrix.Client
 }
 
