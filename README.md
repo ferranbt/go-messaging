@@ -24,3 +24,9 @@ The following messaging platforms are available in go-messaging
 ```
 platform=riot url=<url> user=<user> token=<token>
 ```
+
+### RocketChat
+
+```
+platform=rocketchat url=<url> email=<email> password=<password>
+```

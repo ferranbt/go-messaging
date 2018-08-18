@@ -31,7 +31,8 @@ type Platform interface {
 type factory func(attr map[string]string) (Platform, error)
 
 var Platforms = map[string]factory{
-	"riot": NewRiot,
+	"riot":       NewRiot,
+	"rocketchat": NewRocketChat,
 }
 
 func NewPlatform(conf string) (Platform, error) {
