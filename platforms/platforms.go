@@ -33,6 +33,7 @@ type factory func(attr map[string]string) (Platform, error)
 var Platforms = map[string]factory{
 	"riot":       NewRiot,
 	"rocketchat": NewRocketChat,
+	"slack":      NewSlack,
 }
 
 func NewPlatform(conf string) (Platform, error) {
