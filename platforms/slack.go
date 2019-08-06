@@ -7,7 +7,6 @@ type Slack struct {
 }
 
 func NewSlack(conf map[string]string) (Platform, error) {
-
 	token, ok := conf["token"]
 	if !ok {
 		return nil, fieldNotFound("token")
@@ -26,6 +25,6 @@ func NewSlack(conf map[string]string) (Platform, error) {
 }
 
 func (r Slack) Send(room, msg string) error {
-	_, _, err := r.client.PostMessage(room, msg, slack.PostMessageParameters{})
+	_, _, err := r.client.PostMessage(room, slack.MsgOptionText(msg, false))
 	return err
 }
